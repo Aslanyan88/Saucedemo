@@ -1,24 +1,31 @@
 {
-  "name": "test",
+  "name": "saucedemo-wdio-tests",
   "version": "1.0.0",
-  "description": "",
+  "description": "WebDriverIO tests for SauceDemo website",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "wdio run wdio.conf.js",
+    "test:parallel": "wdio run wdio.conf.js",
+    "test:chrome": "wdio run chrome.conf.js",
+    "test:firefox": "wdio run firefox.conf.js",
+    "test:single": "wdio run wdio.conf.js --spec"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "keywords": [
+    "wdio",
+    "webdriverio",
+    "testing",
+    "automation"
+  ],
   "dependencies": {
-    "@wdio/cli": "^9.10.1",
+    "@wdio/cli": "^8.0.0",
+    "@wdio/local-runner": "^8.0.0",
+    "@wdio/logger": "^8.0.0",
+    "@wdio/mocha-framework": "^8.0.0",
+    "@wdio/spec-reporter": "^8.0.0",
+    "wdio-chromedriver-service": "^8.0.0",
+    "wdio-geckodriver-service": "^4.0.0",
     "chromedriver": "^134.0.0",
-    "webdriverio": "^9.10.1"
-  },
-  "devDependencies": {
-    "@wdio/local-runner": "^9.11.0",
-    "@wdio/mocha-framework": "^9.11.0",
-    "@wdio/spec-reporter": "^9.11.0",
-    "chai": "^5.2.0"
+    "geckodriver": "^4.0.0"
   }
 }
